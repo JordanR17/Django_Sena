@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard de Mensajes | Jordan_dev</title>
+    </head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Dashboard Mensajes</h1>
+            </div>
+    </header>
+
+    <main>
+        <section class="messages-section">
+            <div class="container">
+                <h2>Blog de God Of War</h2>
+                {% if post_list %}
+                    <ul>
+                        {% for post in post_list %}
+                            <li>{{ post.message }}</li>
+                        {% endfor %}
+                    </ul>
+                {% else %}
+                    <p>No hay mensajes para mostrar.</p>
+                {% endif %}
+            </div>
+        </section>
+
+        </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; Jordan_dev. Todos los derechos reservados.</p>
+            </div>
+    </footer>
+
+    </body>
+</html>
